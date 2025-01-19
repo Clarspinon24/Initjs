@@ -6,12 +6,12 @@ let errorContainer = document.getElementById('errorContainer');
 let successContainer = document.getElementById('successContainer');
    
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envoyé ça lance la fonction
     event.preventDefault(); // Empêche l'envoi du formulaire
-    errorContainer.innerHTML = '';
+    errorContainer.innerHTML = '';// Réactualise les messages d'erreur
     
 
-    let mail = document.getElementById('mail');
+    let mail = document.getElementById('mail');// on créer la variable mail
     let mailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Expression régulière pour valider l'email
 
     if (mail.value.trim() === '') { // verifie que le mail est vide, trim supprime les espaces blancs
@@ -28,7 +28,6 @@ form.addEventListener('submit', function(event) {
 
 
     let pseudo = document.querySelector('#pseudo');
-    let pseudoError = document.querySelector('#pseudoError')
 
     if (pseudo.value.length >= 6) { // Vérifie si le pseudo a **au moins** 6 caractères
         console.log('Pseudo Valide');
