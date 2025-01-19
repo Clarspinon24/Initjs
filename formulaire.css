@@ -1,0 +1,118 @@
+ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+li{
+    padding: 20px;
+    list-style-type : none;
+}
+a{
+    text-decoration: none;
+}
+
+.afficher-contenu{
+    display: block;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 50%;
+    height: 60vh;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+}
+input{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-top: 10px;
+    padding: 5px; 
+    border: 1px solid #ccc; 
+}
+#submit{
+    width: 92%;
+    margin-top: 10px;
+    height: 10%;
+}
+label{
+    margin-top: 10px;
+}
+.success{
+    border: 1px solid rgb(35, 119, 62);
+    background-color: rgb(116, 160, 50);
+    color: white;
+}
+.invalide{
+    border: 1px solid rgb(220, 58, 58);
+    background-color: rgb(213, 75, 80);
+    color: white;
+}
+
+.visible{
+    display: block;
+}
+.error{
+    display: none; /* Masquer par défaut */
+ }
+
+
+nav{
+	z-index: 1;
+	border: solid 1px;
+	border-radius: 10px;
+	padding: 15px;
+	text-align: start;
+	font-size: 20px;
+	background-color: rgb(254, 254, 254)
+}
+
+button{
+    border: 1px solid;
+    border-radius: 6px;
+}
+.errorContainer{
+ 
+    background-color: rgb(213, 75, 80);
+}
+.successContainer{
+    background-color: rgb(116, 160, 50);
+}
+
+.black{
+    background-color:rgb(47, 43, 43);
+    color: white;
+}
+
+#sombre{
+       border: 1px solid;
+       border-radius: 10px;
+       padding: 10px;
+       margin: 30px;
+       box-shadow: rgb(189, 185, 185);
+      
+}
+
+.tab{
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+   
+}
+.tab-active{
+    font-weight: bold;
+    background-color: gray;
+}
+.active{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
