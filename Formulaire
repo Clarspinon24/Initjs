@@ -1,3 +1,5 @@
+
+<style>
 let form = document.querySelector('#form');
 let errorContainer = document.getElementById('errorContainer');
 let successContainer = document.getElementById('successContainer');
@@ -110,3 +112,4 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
 } 
 
 );
+</style>
