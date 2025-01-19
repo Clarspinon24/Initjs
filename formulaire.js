@@ -193,9 +193,4 @@ document.querySelectorAll('li').forEach(element =>{ //POur chaque li on applique
     
     Dizzy.Round(Blaze);
     
-    //Button 
-    
-    let sombre = document.querySelector("#sombre")
-    sombre.addEventListener("click", function() {
-    document.body.classList.toggle('black');
-    })
+
