@@ -31,18 +31,18 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
 
     if (pseudo.value.length >= 6) { // Vérifie si le pseudo a **au moins** 6 caractères
         console.log('Pseudo Valide');
-        errorContainer.classList.add('visible'); 
-        errorContainer.classList.remove('error');
-        pseudo.classList.remove('invalide');
-        pseudo.classList.add('success');
-        form.setAttribute("style", " height: 80vh; ");
+        errorContainer.classList.add('visible'); // Rend visible le container
+        errorContainer.classList.remove('error'); // Enlève la class error
+        pseudo.classList.remove('invalide');// de même pour invalide
+        pseudo.classList.add('success');// Affecte la class success
+        form.setAttribute("style", " height: 80vh; ");// agrandit le formulaire
 
     } else {
         errorContainer.classList.add('visible');
         pseudo.classList.add('invalide');
         pseudo.classList.remove('success');
 
-        let err = document.createElement('li');
+        let err = document.createElement('li');// on crée une liste err
         err.innerText = 'Le champ pseudo doit contenir au moins 6 caractères.';
         errorContainer.appendChild(err);// Ajoute err dans le container pour être afficher
     }
@@ -52,21 +52,20 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
       let passCheck = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*., ?]).{10,}$");
 
     // Vérification du mot de passe
-    if (password.value.length < 10 || !passCheck.test(password.value)) {
+    if (password.value.length < 10 || !passCheck.test(password.value)) {// On vérifie également que la valeur du mot de passe est compatible avec le pattern
         password.classList.add('invalide');
         errorContainer.classList.add('visible'); 
         errorContainer.classList.remove('error'); 
         password.classList.remove('success');
        
-        form.setAttribute("style", " height: 80vh; ");
+        form.setAttribute("style", " height: 80vh; ");//
 
-        let err = document.createElement('li');//Créer une liste
+        let err = document.createElement('li');
         err.innerText = 'Le mot de passe doit contenir au moins 10 caractères, une majuscule, une minuscule, un chiffre et un caractère spécial.';
-        errorContainer.appendChild(err);// Ajoute err dans le container pour être afficher 
-
+        errorContainer.appendChild(err);
     } else {
         console.log('Mot de passe Valide'); 
-        password.classList.add('success');// applique la classe success qui rends le fond vert
+        password.classList.add('success');
         password.classList.remove('invalide');
     }
 
@@ -74,7 +73,7 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
 
     if(password.value==passwordRepeat.value){
         console.log('Mot de passe de verif Valide'); 
-        passwordRepeat.classList.add('success');// applique la classe success qui rends le fond vert
+        passwordRepeat.classList.add('success');
         passwordRepeat.classList.remove('invalide');
     } else{
         console.log('Mot de passe de verif Invalide'); 
@@ -85,13 +84,13 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
        
         form.setAttribute("style", " height: 80vh; ");
 
-        let err = document.createElement('li');//Créer une liste
+        let err = document.createElement('li');
         err.innerText = 'Les mots de passes sont différents.';
-        errorContainer.appendChild(err);// Ajoute err dans le container pour être afficher 
+        errorContainer.appendChild(err);
     }
  
   
-    successContainer.classList.remove('error')
+    successContainer.classList.remove('error')//Pour empêcher la répétition des messages d'erreur
     successContainer.classList.remove('visible')
     
 
@@ -118,8 +117,8 @@ form.addEventListener('submit', function(event) {// lorsque l'on appuit sur envo
 
 //TABLEAU
 
-document.querySelectorAll('li').forEach(element =>{
-    element.addEventListener('click',function(){
+document.querySelectorAll('li').forEach(element =>{ //POur chaque li on applique la fonction
+    element.addEventListener('click',function(){ //la fonction s'activr avec un clique
 
         document.querySelectorAll('li').forEach(item=>{
          item.classList.remove('tab-active');
