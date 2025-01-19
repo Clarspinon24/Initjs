@@ -121,15 +121,15 @@ document.querySelectorAll('li').forEach(element =>{ //POur chaque li on applique
     element.addEventListener('click',function(){ //la fonction s'activr avec un clique
 
         document.querySelectorAll('li').forEach(item=>{
-         item.classList.remove('tab-active');
+         item.classList.remove('tab-active');// On désactive tab-active pour tout les items
         })  
-        this.classList.add('tab-active');
+        this.classList.add('tab-active'); // et on l'active pour celui qui as été cliqué
 
-        document.querySelectorAll('div').forEach(item =>{
-        item.classList.add('hide');
+        document.querySelectorAll('div').forEach(item =>{ // Pour toute les div
+        item.classList.add('hide'); // on active hide
          })  
 
-        if (this.classList.contains('tab-form')) {
+        if (this.classList.contains('tab-form')) {// On en séléctionne qu'un
             document.getElementById('formulaire').classList.remove('hide');
         }
         if (this.classList.contains('tab-text')) {
