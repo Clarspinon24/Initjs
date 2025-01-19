@@ -197,7 +197,7 @@ document.querySelectorAll('li').forEach(element =>{
     
     //Button 
     
-    let button = document.querySelector("#sombre")
+    let sombre = document.querySelector("#sombre")
     sombre.addEventListener("click", function() {
     document.body.classList.toggle('black');
     })
